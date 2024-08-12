@@ -1,11 +1,15 @@
 #[allow(dead_code)]
 mod config;
+mod error;
 mod handlers;
+mod models;
 
 use axum::routing::{get, patch, post};
 use axum::Router;
 pub use config::AppConfig;
+pub use error::AppError;
 use handlers::*;
+pub use models::User;
 use std::ops::Deref;
 use std::sync::Arc;
 
